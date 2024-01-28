@@ -1,0 +1,212 @@
+#container {
+  position: relative;
+  background-color: green;
+}
+
+#screen {
+  position: absolute;
+  top: 177px;
+  left: 290px;
+}
+
+#background {
+  position: absolute;
+}
+
+#tapeBox {
+  position: absolute;
+  top: 241px;
+  left: 290px;
+}
+
+#tapeReel {
+  position: absolute;
+  top: 260px;
+  left: 297px;
+}
+
+#tapeWheelLeft {
+  position: absolute;
+  top: 261px;
+  left: 299px;
+  transform: translate(-50%, -50%);
+  height: 44px;
+  width: 45px;
+  transform-origin: center;
+}
+
+#tapeWheelRight {
+  position: absolute;
+  top: 261px;
+  left: 376px;
+  transform: translate(-50%, -50%);
+  height: 44px;
+  width: 45px;
+  transform-origin: center;
+}
+
+.spin {
+  animation: spinAnimation 3s infinite linear; /* Adjust animation duration and timing function as needed */
+  transform-origin: center;
+}
+
+@keyframes spinAnimation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#topSlider {
+  width: 150px;
+  position: absolute;
+  top: 350px;
+  left: 285px;
+  color: aliceblue;
+}
+
+#bottomSlider {
+  width: 150px;
+  position: absolute;
+  top: 383px;
+  left: 285px;
+  color: aliceblue;
+}
+
+#leftSpeakerRim {
+  position: absolute;
+  top: 175px;
+  left: 20px;
+}
+
+#rightSpeakerRim {
+  position: absolute;
+  top: 175px;
+  left: 465px;
+}
+
+#leftSpeakerRimBass {
+  position: absolute;
+  top: 250px;
+  left: 95px;
+  transition: transform 0.12s ease-in-out;
+}
+
+#rightSpeakerRimBass {
+  position: absolute;
+  top: 250px;
+  left: 540px;
+  transition: transform 0.12s ease-in-out;
+}
+
+.bass-active {
+  transform: scale(1.5);
+}
+
+.bass-unActive {
+  transform: scale(0.7);
+}
+
+#leftDialScreen {
+  position: absolute;
+  top: 86px;
+  left: 24px;
+}
+
+#rightDialScreen {
+  position: absolute;
+  top: 86px;
+  left: 150px;
+}
+#leftDialScreenDial {
+  position: absolute;
+  top: 100px;
+  left: 70px;
+  transition: transform 10s ease-in-out;
+}
+#rightDialScreenDial {
+  position: absolute;
+  top: 100px;
+  left: 195px;
+  transition: transform 10s ease-in-out;
+}
+.dialrotator {
+  transform-origin: center calc(100% - 3px);
+  height: 38px !important;
+  animation: rotateDial 10s infinite ease-in-out;
+}
+@keyframes rotateDial {
+  0% {
+    transform: rotate(-90deg);
+  }
+  50% {
+    transform: rotate(90deg);
+  }
+  100% {
+    transform: rotate(-90deg);
+  }
+}
+
+#playButton {
+  position: absolute;
+  top: 99px;
+  left: 324px;
+}
+#pauseButton {
+  position: absolute;
+  top: 99px;
+  left: 362px;
+}
+#backwardButton {
+  position: absolute;
+  top: 99px;
+  left: 399px;
+}
+#forwardButton {
+  position: absolute;
+  top: 99px;
+  left: 437px;
+}
+.dial {
+  position: absolute;
+  top: 96px;
+  left: 504px;
+}
+#second {
+  position: absolute;
+  top: 96px;
+  left: 554px;
+  transform: rotate(-90deg);
+}
+#third {
+  position: absolute;
+  top: 96px;
+  left: 602px;
+  transform: rotate(-35deg);
+}
+#fourth {
+  position: absolute;
+  top: 96px;
+  left: 653px;
+  transform: rotate(-190deg);
+}
+.buttonAni {
+  cursor: pointer;
+  transition: transform 0.3s ease; /* Add a transition for a smooth effect */
+}
+
+.buttonAni.clicked {
+  transform: scale(0.9); /* Shrink to 0.9 when clicked */
+  animation: growAnimation 0.3s forwards; /* Apply a grow animation */
+}
+
+@keyframes growAnimation {
+  from {
+    transform: scale(0.9);
+  }
+  to {
+    transform: scale(1);
+  }
+}
