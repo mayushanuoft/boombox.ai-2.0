@@ -1,7 +1,6 @@
 import { React, useState, useEffect } from "react"
 import "./boomBox.css"
 import Slider from '@mui/material/Slider';
-import SpotifyPlayer from 'react-spotify-web-playback';
 
 export const BoomBox = () => {
     return (
@@ -14,39 +13,10 @@ export const BoomBox = () => {
             <DialScreenDiv />
             <Buttons />
             <DialBox />
-            <MySpotifyPlayer />
         </div>
     )
 }
 
-const MySpotifyPlayer = () => {
-    const [isPlaying, setIsPlaying] = useState(false);
-
-    const handlePlayPause = () => {
-        console.log(setIsPlaying)
-        setIsPlaying(prevState => !prevState);
-    };
-
-    const getOAuthToken = (callback) => {
-        const accessToken = 'BQAdP2Au7LJgRUXNGvCNwXbeU8XPsGVkD1c52nLykmbGw0NgggfLJ8jEqkyjsFq9TIfXCcsuKtZAiA3aHlvie9xSZYdOGsj0-9JmShTXzcDBhsr77wU';
-        callback(accessToken);
-    };
-
-    return (
-        <div>
-            <button onClick={handlePlayPause}>
-                {isPlaying ? 'Pause' : 'Play'}
-            </button>
-            <SpotifyPlayer
-                token=""
-                callback={state => console.log(state)}
-                getOAuthToken={getOAuthToken}
-                play={isPlaying}
-                uris={['spotify:track:2Xr1dTzJee307rmrkt8c0g']}
-            />
-        </div>
-    );
-};
 
 const Background = () => {
     return (

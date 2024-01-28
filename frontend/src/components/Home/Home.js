@@ -3,7 +3,8 @@ import video from "../../assets/synthCityBg.mp4";
 import { BoomBox } from "../boombox";
 import FacialRecModal from "../FacialRec/FacialRecModal";
 import "./Home.css";
-import { TopSongs } from "./components/topsongs.jsx"
+import { TopSongs } from "../topSongs"
+import WebPlayback from "../WebPlayback";
 
 const data = [
   {
@@ -51,6 +52,7 @@ function Home({ token}) {
 
       <BoomBox />
       <TopSongs data={data} />
+      <WebPlayback token={token} />
       {/* <FacialRecModal open={isOpen} /> */}
     </div>
   );

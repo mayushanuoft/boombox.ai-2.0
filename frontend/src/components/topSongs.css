@@ -1,0 +1,35 @@
+#topSongTitle {
+  font-size: 20px;
+  color: aliceblue;
+}
+#frostedGlass {
+  background-size: cover;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.158);
+  width: 380px;
+  color: aliceblue;
+  border-radius: 26px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+}
+.songInfoLeft {
+  color: aliceblue;
+  line-height: 12px;
+}
+.songInfoLeft h1 {
+  font-size: 38px;
+}
+.Flex {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row-reverse;
+  align-items: center;
+  width: 300px;
+  height: 100px;
+}
+.topSongTime {
+  font-size: 50px;
+}

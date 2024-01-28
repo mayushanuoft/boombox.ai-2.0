@@ -21,7 +21,7 @@ function App() {
 
   return (
     <>
-        { (token === '') ? <Login/> : <Home/> }
+        { (token === '') ? <Login/> : <Home token={token}/> }
     </>
   );
 }
